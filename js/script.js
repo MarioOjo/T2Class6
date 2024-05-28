@@ -35,24 +35,39 @@ dogs.splice(1, 2, "jack russel", "doberman", "pitbull");
 console.log(dogs);
 
 function decreaseMars(){
-if (document.getElementById('ticketsMars').value !=0){
+if (document.getElementById('ticketsMars').value != 0){
     document.getElementById('ticketsMars').value=parseInt(document.getElementById
     ('ticketsMars').value) - 1;
 }else{
-    document.getElementById('ticketsMars').value =0;
+    document.getElementById('ticketsMars').value = 0;
 }
 }
 
 function increaseMars(){
-    document.getElementById('ticketsMars').value =parseInt(document.getElementById('ticketsMars').value) + 1;
-
+    document.getElementById('ticketsMars').value = parseInt(document.getElementById('ticketsMars').value) + 1;
 
 }
 
+function decreaseSaturn(){
+    if (document.getElementById('ticketsSaturn').value !=0){
+        document.getElementById('ticketsSaturn').value=parseInt(document.getElementById('ticketsSaturn').value) - 1;
+    }else{
+        document.getElementById('ticketsSaturn').value = 0;
+    }
+    }
+    
+    function increaseSaturn(){
+        document.getElementById('ticketsSaturn').value = parseInt(document.getElementById('ticketsSaturn').value) + 1;
+    
+    }    
 
 let totalMarsCost = 0;
+let totalSaturnCost  = 0;
+let finalCost = 0;
 
 function total(){
-            totalMarsCost =parseInt(document.getElementById('ticketsMars').value) * 50
-            document.getElementById('total').innerHTML = "R " + totalMarsCost;
+            totalMarsCost =parseInt(document.getElementById('ticketsMars').value) * 50;
+            totalSaturnCost =parseInt(document.getElementById('ticketsSaturn').value) * 70;
+            finalCost = totalMarsCost + totalSaturnCost;
+            document.getElementById('total').innerHTML = "R " + finalCost;
 } 
