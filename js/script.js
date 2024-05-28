@@ -54,4 +54,5 @@ let totalMarsCost = 0;
 
 function total(){
             totalMarsCost =parseInt(document.getElementById('ticketsMars').value) * 50
+            document.getElementById('total').innerHTML = "R " + totalMarsCost;
 } 
